@@ -1,6 +1,5 @@
 package com.company;
 import java.util.Scanner;
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class Main {
 
@@ -56,7 +55,7 @@ public class Main {
                     addtoCart(Cart,ven1,ven2,ven3, scan);
                     break;
                 case 4:
-                    removeFromCart(Cart, ven1, ven2, ven3, scan);
+                    //removeFromCart(Cart, ven1, ven2, ven3, scan);
                     break;
                 case 5:
                     checkOut(Cart);
