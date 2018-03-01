@@ -58,6 +58,7 @@ public class Main {
                 case 4:
                     break;
                 case 5:
+                    checkOut(Cart);
                     break;
                 case 6:
                     done = true;
@@ -111,8 +112,8 @@ public class Main {
                 System.out.println("Found");
                 if (ven1.available[i].inCart == false) {
                     for (int j = 0; j < cart.length; j++) {
-                        if (cart[i] == null) {
-                            cart[i] = ven1.available[i];
+                        if (cart[j] == null) {
+                            cart[j] = ven1.available[i];
                             ven1.available[i].inCart = true;
                             break;
                         }
@@ -126,10 +127,11 @@ public class Main {
             for (int i = 0; i < ven2.available.length; i++) {
                 if (choice.equals(ven2.available[i].getName())) {
                     found = true;
+                    System.out.println("Found");
                     if (ven2.available[i].inCart == false) {
                         for (int j = 0; j < cart.length; j++) {
-                            if (cart[i] == null) {
-                                cart[i] = ven2.available[i];
+                            if (cart[j] == null) {
+                                cart[j] = ven2.available[i];
                                 ven2.available[i].inCart = true;
                                 break;
                             }
@@ -145,10 +147,11 @@ public class Main {
             for (int i = 0; i < ven3.available.length; i++) {
                 if (choice.equals(ven3.available[i].getName())) {
                     found = true;
+                    System.out.println("Found");
                     if (ven3.available[i].inCart == false) {
                         for (int j = 0; j < cart.length; j++) {
-                            if (cart[i] == null) {
-                                cart[i] = ven3.available[i];
+                            if (cart[j] == null) {
+                                cart[j] = ven3.available[i];
                                 ven3.available[i].inCart = true;
                                 break;
                             }
@@ -159,8 +162,8 @@ public class Main {
                 }
             }
         }
-
-        System.out.println("Item not found");
+        if(!found)
+            System.out.println("Item not found");
 
     }
 
